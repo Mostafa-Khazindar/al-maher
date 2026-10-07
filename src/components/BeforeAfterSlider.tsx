@@ -10,12 +10,25 @@ export default function BeforeAfterSlider() {
   const [sliderPos, setSliderPos] = useState(50);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const handlePointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
+  const updateSlider = (clientX: number) => {
     if (!containerRef.current) return;
     const rect = containerRef.current.getBoundingClientRect();
-    const x = Math.max(0, Math.min(e.clientX - rect.left, rect.width));
+    const x = Math.max(0, Math.min(clientX - rect.left, rect.width));
     const percentage = (x / rect.width) * 100;
     setSliderPos(percentage);
+  };
+
+  const handlePointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
+    updateSlider(e.clientX);
+    const onPointerMove = (moveEvent: PointerEvent) => {
+      updateSlider(moveEvent.clientX);
+    };
+    const onPointerUp = () => {
+      window.removeEventListener("pointermove", onPointerMove);
+      window.removeEventListener("pointerup", onPointerUp);
+    };
+    window.addEventListener("pointermove", onPointerMove);
+    window.addEventListener("pointerup", onPointerUp);
   };
 
   return (
@@ -40,8 +53,8 @@ export default function BeforeAfterSlider() {
           </h2>
           <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
             {locale === "ar"
-              ? "مقارنة متطابقة الأبعاد والزوايا لصدمة الرفرف والصدام والاسطب الخلفي لسيارة كاديلاك ATS مع النتيجة النهائية بعد استعدال الصاج والدهان الحراري."
-              : "Exact proportion and angle match showing Cadillac ATS rear bumper and quarter panel collision restored to factory perfection."}
+              ? "مقارنة دقيقة ومحاذاة هندسية لصدمة الرفرف الخلفي والصدام لسيارة كاديلاك ATS مقارنة بالنتيجة النهائية بعد السمكرة والرش الحراري."
+              : "Precision alignment showcasing Cadillac ATS rear bumper and quarter panel collision restored to factory condition."}
           </p>
         </div>
 
@@ -81,15 +94,15 @@ export default function BeforeAfterSlider() {
           <div className="mt-6 relative">
             <div
               ref={containerRef}
-              onPointerMove={handlePointerMove}
-              className="relative w-full aspect-[4/3] sm:aspect-[16/10] max-h-[560px] rounded-2xl overflow-hidden cursor-ew-resize select-none border border-[#e8e4d8] shadow-lg bg-slate-900"
+              onPointerDown={handlePointerDown}
+              className="relative w-full aspect-[4/3] sm:aspect-[16/10] max-h-[580px] rounded-2xl overflow-hidden cursor-ew-resize select-none border border-[#e8e4d8] shadow-lg bg-slate-950 touch-none"
             >
-              {/* "AFTER" Layer (Full Background - Perfectly Scaled) */}
+              {/* "AFTER" Layer (Full Background - Repaired Cadillac) */}
               <div className="absolute inset-0 w-full h-full bg-slate-900 overflow-hidden">
                 <img
                   src={asset("/portfolio/cadillac-after-matched.jpg")}
                   alt="Cadillac ATS After Repair"
-                  className="w-full h-full object-cover object-center"
+                  className="w-full h-full object-cover object-center pointer-events-none"
                 />
 
                 {/* Badge After */}
@@ -99,7 +112,7 @@ export default function BeforeAfterSlider() {
                 </div>
               </div>
 
-              {/* "BEFORE" Layer (Clipped - Perfectly Scaled & Angle-Matched) */}
+              {/* "BEFORE" Layer (Clipped - Collision Damage) */}
               <div
                 className="absolute inset-0 h-full overflow-hidden border-e-4 border-blue-500 z-10"
                 style={{ width: `${sliderPos}%` }}
@@ -108,7 +121,7 @@ export default function BeforeAfterSlider() {
                   <img
                     src={asset("/portfolio/cadillac-before-matched.jpg")}
                     alt="Cadillac ATS Before Repair - Collision Damage"
-                    className="w-full h-full object-cover object-center"
+                    className="w-full h-full object-cover object-center pointer-events-none"
                     style={{ width: "100%", height: "100%" }}
                   />
 
@@ -125,7 +138,7 @@ export default function BeforeAfterSlider() {
                 className="absolute top-0 bottom-0 w-1 bg-blue-500 shadow-[0_0_15px_#2563eb] pointer-events-none"
                 style={{ left: `${sliderPos}%` }}
               >
-                <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-11 h-11 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center shadow-2xl border-2 border-white text-xs">
+                <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center shadow-2xl border-2 border-white text-xs">
                   <ArrowLeftRight className="w-5 h-5" />
                 </div>
               </div>
