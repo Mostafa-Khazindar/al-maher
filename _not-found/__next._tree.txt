@@ -1,5 +1,6 @@
-:HL["/al-maher/_next/static/chunks/3li_g7_d5awcd.css","style"]
+:HL["/al-maher/_next/static/chunks/0z1xycbpsy1n0.css","style"]
+:HL["/al-maher/styles.css","style"]
 :HL["https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap","style"]
 2:[["children",{"s":"__PAGE__","h":160}]]
 1:[["children",{"s":"/_not-found","h":96,"c":"$Q2"}]]
-0:{"b":"xwPThYBZX5D_Becp-y9uC","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"YyaBuQYCiZFdeU904Y1jf","t":{"t":{"s":"","h":80,"c":"$Q1"}}}

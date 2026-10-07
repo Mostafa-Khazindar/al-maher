@@ -1,43 +1,42 @@
 1:"$Sreact.fragment"
 2:"/al-maher/_next/static/chunks/0umf92h1sb77c.js"
-3:"/al-maher/_next/static/chunks/18j2-j_g0as0b.js"
-4:I[39756,["$2","$3"],"default"]
-5:I[37457,["$2","$3"],"default"]
-9:I[47257,["$2","$3"],"ClientPageRoot"]
-a:"/al-maher/_next/static/chunks/1nngk4_atf2v9.js"
-b:"/al-maher/_next/static/chunks/1xesl0agxfas3.js"
-c:I[52683,["$2","$3","$a","$b"],"default"]
-f:I[97367,["$2","$3"],"OutletBoundary"]
-10:"$Sreact.suspense"
-13:"ViewportBoundary"
-14:I[97367,["$2","$3"],"$13"]
-15:"MetadataBoundary"
-16:I[97367,["$2","$3"],"$15"]
-:HL["/al-maher/_next/static/chunks/3li_g7_d5awcd.css","style"]
+3:I[39756,["$2"],"default"]
+4:I[37457,["$2"],"default"]
+8:I[47257,["$2"],"ClientPageRoot"]
+9:"/al-maher/_next/static/chunks/2u6ksg6qgv-zt.js"
+a:I[52683,["$2","$9"],"default"]
+d:I[97367,["$2"],"OutletBoundary"]
+e:"$Sreact.suspense"
+11:"ViewportBoundary"
+12:I[97367,["$2"],"$11"]
+13:"MetadataBoundary"
+14:I[97367,["$2"],"$13"]
+:HL["/al-maher/_next/static/chunks/0z1xycbpsy1n0.css","style"]
+:HL["/al-maher/styles.css","style"]
 :HL["https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap","style"]
-7:X
-8:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$1","c",{"children":[["$","$L9",null,{"Component":"$c","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@d","$@e"]}}],[["$","script","script-0",{"src":"/al-maher/_next/static/chunks/1nngk4_atf2v9.js","async":true}],["$","script","script-1",{"src":"/al-maher/_next/static/chunks/1xesl0agxfas3.js","async":true}]],["$","$Lf",null,{"children":["$","$10",null,{"name":"Next.MetadataOutlet","children":"$@11"}]}]]}],"p":"$@12","v":null,"s":"$7"}}]]
-0:{"t":{"t":{"s":"","h":80,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/al-maher/_next/static/chunks/3li_g7_d5awcd.css","precedence":"next"}],["$","script","script-0",{"src":"/al-maher/_next/static/chunks/0umf92h1sb77c.js","async":true}],["$","script","script-1",{"src":"/al-maher/_next/static/chunks/18j2-j_g0as0b.js","async":true}]],["$","html",null,{"lang":"ar","dir":"rtl","className":"scroll-smooth","children":[["$","head",null,{"children":[["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":"anonymous"}],["$","link",null,{"href":"https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap","rel":"stylesheet"}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"AutoBodyShop\",\"name\":\"الماهر لسمكرة ودهان السيارات | Al-Maher Body Shop\",\"description\":\"مركز متخصص في سمكرة وهياكل ودهان السيارات باستخدام أنظمة Spies Hecker في صناعية عسفان، جدة.\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"بلوك 1102، صناعية عسفان\",\"addressLocality\":\"جدة\",\"addressRegion\":\"منطقة مكة المكرمة\",\"addressCountry\":\"SA\"},\"geo\":{\"@type\":\"GeoCoordinates\",\"latitude\":\"21.9056\",\"longitude\":\"39.3090\"},\"areaServed\":\"Jeddah\",\"priceRange\":\"$$\",\"serviceType\":[\"سمكرة سيارات\",\"دهان وفرن حراري\",\"مطابقة ألوان رقمية\",\"إصلاح حوادث\",\"تعديل صدمات وانبعاجات\"]}"}}]]}],["$","body",null,{"className":"bg-[#f8fafc] text-[#0f172a] font-sans antialiased selection:bg-blue-600 selection:text-white min-h-screen overflow-x-hidden","children":["$","$L4",null,{"parallelRouterKey":"children","template":["$","$L5",null,{}],"notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]]}]}]]}]]}],"p":"$@6","v":null,"s":"$7"},"c":"$Q8"},"h":{"r":["$","$1","h",{"children":[null,["$","$L14",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=5"}],["$","meta","2",{"name":"theme-color","content":"#0a0d14"}]]}],["$","$L16",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$10",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"الماهر لسمكرة ودهان السيارات | Al-Maher Automotive Body Shop - جدة"}],["$","meta","1",{"name":"description","content":"مركز الماهر المتخصص في سمكرة ودهان السيارات بأعلى المعايير، مطابقة ألوان احترافية واستخدام دهانات Spies Hecker العالمية في صناعية عسفان، بلوك 1102، جدة."}],["$","meta","2",{"name":"author","content":"مركز الماهر لسمكرة ودهان السيارات"}],["$","meta","3",{"name":"keywords","content":"الماهر,سمكرة سيارات جدة,ورشة دهان سيارات عسفان,صناعية عسفان بلوك 1102,دهان Spies Hecker,إصلاح حوادث السيارات جدة,تعديل صدمات,مطابقة ألوان السيارات,Al-Maher Body Shop Jeddah,Car collision repair Asfan"}],["$","meta","4",{"name":"creator","content":"الماهر"}],["$","meta","5",{"name":"publisher","content":"الماهر"}],["$","meta","6",{"name":"robots","content":"index, follow"}],["$","link","7",{"rel":"canonical","href":"https://al-maher-bodyshop.sa/"}],"$L17","$L18","$L19","$L1a","$L1b","$L1c","$L1d","$L1e","$L1f","$L20","$L21","$L22"]}]}],null]}],null]}],"p":"$@23","v":null,"s":"$7"}},"a":"$@24","u":"$@25","b":"xwPThYBZX5D_Becp-y9uC"}
-26:I[27201,["$2","$3"],"IconMark"]
-d:{}
-e:"$8:0:1:d:r:props:children:0:props:serverProvidedParams:params"
-11:null
-17:["$","meta","8",{"property":"og:title","content":"الماهر لسمكرة ودهان السيارات | حرفية وإتقان في صناعية عسفان - جدة"}]
-18:["$","meta","9",{"property":"og:description","content":"مركز احترافي متقدم لإصلاح هياكل السيارات، سمكرة دقيقة، وتطبيق أنظمة الدهان العالمية في صناعية عسفان، جدة."}]
-19:["$","meta","10",{"property":"og:url","content":"https://al-maher-bodyshop.sa/"}]
-1a:["$","meta","11",{"property":"og:site_name","content":"الماهر لسمكرة ودهان السيارات | Al-Maher Body Shop"}]
-1b:["$","meta","12",{"property":"og:locale","content":"ar_SA"}]
-1c:["$","meta","13",{"property":"og:locale:alternate","content":"en_US"}]
-1d:["$","meta","14",{"property":"og:type","content":"website"}]
-1e:["$","meta","15",{"name":"twitter:card","content":"summary_large_image"}]
-1f:["$","meta","16",{"name":"twitter:title","content":"الماهر لسمكرة ودهان السيارات | Al-Maher Body Shop"}]
-20:["$","meta","17",{"name":"twitter:description","content":"احترافية في إصلاح هيكل سيارتك وإعادتها لحالتها الأصلية - صناعية عسفان، جدة."}]
-21:["$","link","18",{"rel":"icon","href":"/al-maher/favicon.ico?favicon.117ezoe8m31dk.ico","sizes":"48x48","type":"image/x-icon"}]
-22:["$","$L26","19",{}]
-7:300
-25:true
-7:C
-24:0
-6:"$undefined"
-23:"$undefined"
-12:"$undefined"
+6:X
+7:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$1","c",{"children":[["$","$L8",null,{"Component":"$a","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@b","$@c"]}}],[["$","script","script-0",{"src":"/al-maher/_next/static/chunks/2u6ksg6qgv-zt.js","async":true}]],["$","$Ld",null,{"children":["$","$e",null,{"name":"Next.MetadataOutlet","children":"$@f"}]}]]}],"p":"$@10","v":null,"s":"$6"}}]]
+0:{"t":{"t":{"s":"","h":80,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/al-maher/_next/static/chunks/0z1xycbpsy1n0.css","precedence":"next"}],["$","script","script-0",{"src":"/al-maher/_next/static/chunks/0umf92h1sb77c.js","async":true}]],["$","html",null,{"lang":"ar","dir":"rtl","className":"scroll-smooth","children":[["$","head",null,{"children":[["$","link",null,{"rel":"stylesheet","href":"/al-maher/styles.css"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":"anonymous"}],["$","link",null,{"href":"https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap","rel":"stylesheet"}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"AutoBodyShop\",\"name\":\"الماهر لسمكرة ودهان السيارات | Al-Maher Body Shop\",\"description\":\"مركز متخصص في سمكرة وهياكل ودهان السيارات باستخدام أنظمة Spies Hecker في صناعية عسفان، جدة.\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"بلوك 1102، صناعية عسفان\",\"addressLocality\":\"جدة\",\"addressRegion\":\"منطقة مكة المكرمة\",\"addressCountry\":\"SA\"},\"geo\":{\"@type\":\"GeoCoordinates\",\"latitude\":\"21.9056\",\"longitude\":\"39.3090\"},\"areaServed\":\"Jeddah\",\"priceRange\":\"$$\",\"serviceType\":[\"سمكرة سيارات\",\"دهان وفرن حراري\",\"مطابقة ألوان رقمية\",\"إصلاح حوادث\",\"تعديل صدمات وانبعاجات\"]}"}}]]}],["$","body",null,{"className":"bg-[#f8fafc] text-[#0f172a] font-sans antialiased selection:bg-blue-600 selection:text-white min-h-screen overflow-x-hidden","children":["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}],"notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]]}]}]]}]]}],"p":"$@5","v":null,"s":"$6"},"c":"$Q7"},"h":{"r":["$","$1","h",{"children":[null,["$","$L12",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=5"}],["$","meta","2",{"name":"theme-color","content":"#0a0d14"}]]}],["$","$L14",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$e",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"الماهر لسمكرة ودهان السيارات | Al-Maher Automotive Body Shop - جدة"}],["$","meta","1",{"name":"description","content":"مركز الماهر المتخصص في سمكرة ودهان السيارات بأعلى المعايير، مطابقة ألوان احترافية واستخدام دهانات Spies Hecker العالمية في صناعية عسفان، بلوك 1102، جدة."}],["$","meta","2",{"name":"author","content":"مركز الماهر لسمكرة ودهان السيارات"}],["$","meta","3",{"name":"keywords","content":"الماهر,سمكرة سيارات جدة,ورشة دهان سيارات عسفان,صناعية عسفان بلوك 1102,دهان Spies Hecker,إصلاح حوادث السيارات جدة,تعديل صدمات,مطابقة ألوان السيارات,Al-Maher Body Shop Jeddah,Car collision repair Asfan"}],["$","meta","4",{"name":"creator","content":"الماهر"}],["$","meta","5",{"name":"publisher","content":"الماهر"}],["$","meta","6",{"name":"robots","content":"index, follow"}],["$","link","7",{"rel":"canonical","href":"https://al-maher-bodyshop.sa/"}],"$L15","$L16","$L17","$L18","$L19","$L1a","$L1b","$L1c","$L1d","$L1e","$L1f","$L20"]}]}],null]}],null]}],"p":"$@21","v":null,"s":"$6"}},"a":"$@22","u":"$@23","b":"YyaBuQYCiZFdeU904Y1jf"}
+24:I[27201,["$2"],"IconMark"]
+b:{}
+c:"$7:0:1:d:r:props:children:0:props:serverProvidedParams:params"
+f:null
+15:["$","meta","8",{"property":"og:title","content":"الماهر لسمكرة ودهان السيارات | حرفية وإتقان في صناعية عسفان - جدة"}]
+16:["$","meta","9",{"property":"og:description","content":"مركز احترافي متقدم لإصلاح هياكل السيارات، سمكرة دقيقة، وتطبيق أنظمة الدهان العالمية في صناعية عسفان، جدة."}]
+17:["$","meta","10",{"property":"og:url","content":"https://al-maher-bodyshop.sa/"}]
+18:["$","meta","11",{"property":"og:site_name","content":"الماهر لسمكرة ودهان السيارات | Al-Maher Body Shop"}]
+19:["$","meta","12",{"property":"og:locale","content":"ar_SA"}]
+1a:["$","meta","13",{"property":"og:locale:alternate","content":"en_US"}]
+1b:["$","meta","14",{"property":"og:type","content":"website"}]
+1c:["$","meta","15",{"name":"twitter:card","content":"summary_large_image"}]
+1d:["$","meta","16",{"name":"twitter:title","content":"الماهر لسمكرة ودهان السيارات | Al-Maher Body Shop"}]
+1e:["$","meta","17",{"name":"twitter:description","content":"احترافية في إصلاح هيكل سيارتك وإعادتها لحالتها الأصلية - صناعية عسفان، جدة."}]
+1f:["$","link","18",{"rel":"icon","href":"/al-maher/favicon.ico?favicon.117ezoe8m31dk.ico","sizes":"48x48","type":"image/x-icon"}]
+20:["$","$L24","19",{}]
+6:300
+23:true
+6:C
+22:0
+5:"$undefined"
+21:"$undefined"
+10:"$undefined"
