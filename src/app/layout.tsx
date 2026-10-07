@@ -56,6 +56,7 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl" className="scroll-smooth">
       <head>
+        <link rel="stylesheet" href="/al-maher/styles.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
@@ -97,7 +98,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="bg-[#f8fafc] text-[#0f172a] font-sans antialiased selection:bg-blue-600 selection:text-white min-h-screen overflow-x-hidden">
+      <body className="bg-[#fbfaf6] text-[#0f172a] font-sans antialiased selection:bg-blue-600 selection:text-white min-h-screen overflow-x-hidden">
         {children}
       </body>
     </html>

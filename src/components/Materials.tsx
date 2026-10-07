@@ -5,6 +5,8 @@ import { useLanguage } from "@/context/LanguageContext";
 import { MATERIALS } from "@/data/siteData";
 import { Shield, Sparkles, CheckCircle, Award, Layers, FlaskConical } from "lucide-react";
 
+import { asset } from "@/utils/paths";
+
 export default function Materials() {
   const { locale } = useLanguage();
 
@@ -41,7 +43,7 @@ export default function Materials() {
             {/* Visual Photo of Spies Hecker Tins */}
             <div className="lg:col-span-6 rounded-2xl overflow-hidden border border-slate-200 shadow-md">
               <img
-                src="/materials/spies-hecker-products.jpg"
+                src={asset("/materials/spies-hecker-products.jpg")}
                 alt="منتجات وعبوات دهانات Spies Hecker في ورشة الماهر"
                 className="w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
               />

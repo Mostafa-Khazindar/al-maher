@@ -4,13 +4,15 @@ import React, { useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { Eye, Sparkles, X } from "lucide-react";
 
+import { asset } from "@/utils/paths";
+
 export default function WorkshopGallery() {
   const { locale } = useLanguage();
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const galleryItems = [
     {
-      src: "/workshop/workshop-night-sign.jpg",
+      src: asset("/workshop/workshop-night-sign.jpg"),
       titleAr: "واجهة ورشة الماهر العالمي ليلاً وشعار الهوية النيون الأصلي",
       titleEn: "Al-Maher Al-Alami Night Neon Signage & Active Bays",
       categoryAr: "مقر الورشة والهوية",
@@ -19,7 +21,7 @@ export default function WorkshopGallery() {
       badgeEn: "Authentic Neon Logo",
     },
     {
-      src: "/portfolio/cadillac-after-repaired.png",
+      src: asset("/portfolio/cadillac-after-repaired.png"),
       titleAr: "كاديلاك ATS بعد إتمام السمكرة والدهان بالكامل",
       titleEn: "Cadillac ATS Completed After Full Repair & Paint",
       categoryAr: "سيارات تم إصلاحها",
@@ -28,7 +30,7 @@ export default function WorkshopGallery() {
       badgeEn: "Plate: 7433 LNH",
     },
     {
-      src: "/workshop/workshop-day-1103.jpg",
+      src: asset("/workshop/workshop-day-1103.jpg"),
       titleAr: "مظلات العمل الخارجية وقسم الاستقبال (صناعية عسفان — بلوك 1103)",
       titleEn: "Outdoor Work Canopies & Reception (Asfan Block 1103)",
       categoryAr: "مقر الورشة",
@@ -37,7 +39,7 @@ export default function WorkshopGallery() {
       badgeEn: "Block 1103 Asfan",
     },
     {
-      src: "/materials/spies-hecker-products.jpg",
+      src: asset("/materials/spies-hecker-products.jpg"),
       titleAr: "أنظمة ومواد دهانات Spies Hecker الألمانية المعتمدة في المركز",
       titleEn: "Official Spies Hecker German Coatings & Clearcoats",
       categoryAr: "المواد والتقنية",

@@ -1,44 +1,31 @@
 "use client";
 
 import React from "react";
-import dynamic from "next/dynamic";
 import { useLanguage } from "@/context/LanguageContext";
 import { SITE_CONFIG } from "@/data/siteData";
-import { Calendar, MessageCircle, ChevronDown, Award, Sparkles, ShieldCheck, MapPin } from "lucide-react";
-
-// Load 3D Studio
-const CarCanvas = dynamic(() => import("./CarCanvas"), {
-  ssr: false,
-  loading: () => (
-    <div className="w-full h-[400px] flex items-center justify-center bg-slate-100 rounded-2xl border border-slate-200">
-      <div className="flex flex-col items-center gap-3 text-slate-500">
-        <div className="w-8 h-8 border-3 border-blue-600 border-t-transparent rounded-full animate-spin" />
-        <span className="text-xs font-semibold">تهيئة استوديو العرض...</span>
-      </div>
-    </div>
-  ),
-});
+import { Calendar, MessageCircle, Award, Sparkles, ShieldCheck, CheckCircle } from "lucide-react";
+import { asset } from "@/utils/paths";
 
 export default function Hero() {
   const { locale } = useLanguage();
 
   return (
-    <section className="relative min-h-[85vh] flex items-center pt-8 pb-16 overflow-hidden bg-gradient-to-b from-blue-50/50 via-white to-slate-50 workshop-light-grid">
+    <section className="relative min-h-[85vh] flex items-center pt-8 pb-16 overflow-hidden bg-gradient-to-b from-[#f5f3ec] via-[#fbfaf6] to-[#fbfaf6] border-b border-[#e8e4d8]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* Main Brand Copy */}
           <div className="lg:col-span-6 flex flex-col items-start space-y-6 text-start">
             {/* Official Clean Logo Badge */}
-            <div className="p-2 sm:p-3 rounded-2xl bg-white border border-blue-100 shadow-sm inline-block">
+            <div className="p-3.5 rounded-2xl bg-white border border-[#e8e4d8] shadow-sm inline-block">
               <img
-                src="/workshop/official-logo-transparent.png"
+                src={asset("/workshop/official-logo-transparent.png")}
                 alt="الماهر العالمي - الشعار الرسمي"
                 className="h-14 sm:h-16 w-auto object-contain"
               />
             </div>
 
             {/* Location & Trust Badge */}
-            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold shadow-sm">
+            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold shadow-2xs">
               <span className="w-2 h-2 rounded-full bg-blue-600 animate-ping" />
               <span>
                 {locale === "ar"
@@ -75,19 +62,19 @@ export default function Hero() {
 
             {/* Quick Pillars */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 w-full max-w-lg pt-1">
-              <div className="p-3 rounded-xl bg-white border border-slate-200 shadow-sm flex items-center gap-2.5">
+              <div className="p-3.5 rounded-2xl bg-white border border-[#e8e4d8] shadow-2xs flex items-center gap-2.5">
                 <Sparkles className="w-5 h-5 text-blue-600 shrink-0" />
                 <span className="text-xs font-bold text-slate-700">
                   {locale === "ar" ? "مطابقة ألوان رقمية" : "Digital Color Match"}
                 </span>
               </div>
-              <div className="p-3 rounded-xl bg-white border border-slate-200 shadow-sm flex items-center gap-2.5">
+              <div className="p-3.5 rounded-2xl bg-white border border-[#e8e4d8] shadow-2xs flex items-center gap-2.5">
                 <ShieldCheck className="w-5 h-5 text-emerald-600 shrink-0" />
                 <span className="text-xs font-bold text-slate-700">
                   {locale === "ar" ? "أفران رش حرارية" : "Thermal Bake Booth"}
                 </span>
               </div>
-              <div className="p-3 rounded-xl bg-white border border-slate-200 shadow-sm flex items-center gap-2.5 col-span-2 sm:col-span-1">
+              <div className="p-3.5 rounded-2xl bg-white border border-[#e8e4d8] shadow-2xs flex items-center gap-2.5 col-span-2 sm:col-span-1">
                 <Award className="w-5 h-5 text-blue-600 shrink-0" />
                 <span className="text-xs font-bold text-slate-700">
                   Spies Hecker
@@ -113,7 +100,7 @@ export default function Hero() {
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-emerald-50 border border-emerald-300 hover:bg-emerald-100 text-emerald-700 font-bold text-sm transition-all"
+                className="w-full sm:w-auto flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-emerald-50 border border-emerald-300 hover:bg-emerald-100 text-emerald-800 font-bold text-sm transition-all"
               >
                 <MessageCircle className="w-4 h-4 text-emerald-600" />
                 <span>{locale === "ar" ? "واتساب (0544792646)" : "WhatsApp"}</span>
@@ -121,37 +108,52 @@ export default function Hero() {
 
               <a
                 href="#portfolio"
-                className="w-full sm:w-auto flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-white border border-slate-300 hover:border-blue-400 text-slate-700 font-bold text-sm transition-all shadow-sm"
+                className="w-full sm:w-auto flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-white border border-[#e8e4d8] hover:border-blue-400 text-slate-700 font-bold text-sm transition-all shadow-2xs"
               >
                 <span>{locale === "ar" ? "شاهد قبل وبعد" : "Before & After"}</span>
               </a>
             </div>
           </div>
 
-          {/* 3D Interactive Presentation Stage (Working Bright Studio with Color Selector) */}
+          {/* Clean Real Automotive Workshop Bay Showcase */}
           <div className="lg:col-span-6 relative flex flex-col items-center">
-            <div className="w-full relative rounded-3xl bg-white border border-slate-200 p-3 shadow-xl overflow-hidden box-blue-glow">
-              <div className="flex items-center justify-between pb-2 px-2 border-b border-slate-100">
-                <div className="flex items-center gap-2 text-xs font-bold text-slate-700">
+            <div className="w-full relative rounded-3xl bg-[#f5f3ec] border border-[#e8e4d8] p-3 shadow-xl overflow-hidden">
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-900 shadow-inner group">
+                <img
+                  src={asset("/workshop/workshop-night-sign.jpg")}
+                  alt="مقر وبايات مركز الماهر العالمي بعسفان"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-black/20" />
+
+                {/* Floating Badge */}
+                <div className="absolute top-4 start-4 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-[#e8e4d8] text-blue-900 text-xs font-black shadow-md flex items-center gap-2">
                   <span className="w-2.5 h-2.5 rounded-full bg-blue-600" />
-                  <span>{locale === "ar" ? "استوديو العرض التفاعلي للدهان" : "Interactive 3D Paint Studio"}</span>
+                  <span>{locale === "ar" ? "مقر الورشة الحقيقي — عسفان" : "Official Asfan Workshop"}</span>
                 </div>
-                <span className="text-[11px] text-slate-500 font-mono">
-                  {locale === "ar" ? "تحكم تفاعلي ثلاثي الأبعاد" : "3D WebGL Studio"}
-                </span>
+
+                <div className="absolute bottom-4 start-4 end-4 text-white">
+                  <span className="text-[11px] font-mono text-blue-300 uppercase font-semibold">
+                    {locale === "ar" ? "صناعية عسفان • بلوك 1102 / 1103" : "Asfan Industrial • Block 1102 / 1103"}
+                  </span>
+                  <h3 className="text-lg font-black text-white mt-0.5">
+                    {locale === "ar" ? "ورشة متكاملة للسمكرة والدهان الحراري" : "Full Collision & Thermal Bake Facility"}
+                  </h3>
+                </div>
               </div>
 
-              {/* 3D Canvas */}
-              <div className="mt-2">
-                <CarCanvas paintColor="#1d4ed8" />
+              {/* Bottom Feature Badges */}
+              <div className="mt-3 grid grid-cols-2 gap-2 text-xs">
+                <div className="p-3 rounded-xl bg-white border border-[#e8e4d8] flex items-center gap-2 text-slate-700 shadow-2xs">
+                  <CheckCircle className="w-4 h-4 text-blue-600 shrink-0" />
+                  <span className="font-semibold">{locale === "ar" ? "استعدال وسحب على البارد" : "Precision Cold Pulling"}</span>
+                </div>
+                <div className="p-3 rounded-xl bg-white border border-[#e8e4d8] flex items-center gap-2 text-slate-700 shadow-2xs">
+                  <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0" />
+                  <span className="font-semibold">{locale === "ar" ? "دهان Spies Hecker ألماني" : "Spies Hecker Coatings"}</span>
+                </div>
               </div>
             </div>
-
-            <p className="text-[12px] text-slate-500 mt-3 text-center">
-              {locale === "ar"
-                ? "يمكنك تدوير السيارة بالماوس وتغيير درجات ألوان الدهان الحراري وتجربتها مباشرة"
-                : "Rotate the car and preview thermal bake metallic color finishes"}
-            </p>
           </div>
         </div>
       </div>

@@ -5,6 +5,8 @@ import { useLanguage } from "@/context/LanguageContext";
 import { SITE_CONFIG } from "@/data/siteData";
 import { MapPin, Navigation, MessageCircle, Clock, ExternalLink } from "lucide-react";
 
+import { asset } from "@/utils/paths";
+
 export default function LocationSection() {
   const { locale } = useLanguage();
 
@@ -97,7 +99,7 @@ export default function LocationSection() {
             <div className="rounded-3xl bg-slate-50 border border-slate-200 p-3 shadow-xl overflow-hidden">
               <div className="relative h-[360px] sm:h-[420px] rounded-2xl overflow-hidden bg-slate-900">
                 <img
-                  src="/workshop/workshop-day-1103.jpg"
+                  src={asset("/workshop/workshop-day-1103.jpg")}
                   alt="موقع مركز الماهر - صناعية عسفان بلوك 1103"
                   className="w-full h-full object-cover"
                 />

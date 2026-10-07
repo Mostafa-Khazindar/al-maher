@@ -30,11 +30,11 @@ export default function Services() {
   };
 
   return (
-    <section id="services" className="py-24 bg-white relative overflow-hidden border-t border-slate-200">
+    <section id="services" className="py-24 bg-[#fbfaf6] relative overflow-hidden border-t border-[#e8e4d8]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold tracking-wider uppercase">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold tracking-wider uppercase">
             {locale === "ar" ? "خدمات الورشة المتكاملة" : "Body Shop Services"}
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900">
@@ -60,15 +60,15 @@ export default function Services() {
           {SERVICES.map((srv) => (
             <div
               key={srv.id}
-              className="group relative p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-500 transition-all duration-300 flex flex-col justify-between hover:shadow-lg hover:-translate-y-1"
+              className="group relative p-6 rounded-3xl bg-[#f5f3ec] border border-[#e8e4d8] hover:border-blue-500 transition-all duration-300 flex flex-col justify-between hover:shadow-xl hover:-translate-y-1"
             >
               <div>
                 <div className="flex items-start justify-between mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-white border border-slate-200 flex items-center justify-center group-hover:scale-110 group-hover:bg-blue-50 transition-transform shadow-sm">
+                  <div className="w-12 h-12 rounded-2xl bg-white border border-[#e8e4d8] flex items-center justify-center group-hover:scale-110 group-hover:bg-blue-50 transition-transform shadow-2xs">
                     {iconMap[srv.iconName]}
                   </div>
                   {srv.badgeAr && (
-                    <span className="text-[10px] font-bold px-2.5 py-1 rounded-md bg-blue-100 text-blue-800">
+                    <span className="text-[10px] font-bold px-2.5 py-1 rounded-lg bg-blue-100 text-blue-800">
                       {locale === "ar" ? srv.badgeAr : srv.badgeEn}
                     </span>
                   )}
@@ -83,7 +83,7 @@ export default function Services() {
                 </p>
               </div>
 
-              <div className="pt-5 mt-5 border-t border-slate-200/80 flex items-center justify-between">
+              <div className="pt-5 mt-5 border-t border-[#e8e4d8] flex items-center justify-between">
                 <a
                   href="#appointment"
                   className="text-xs font-semibold text-blue-600 hover:text-blue-800 flex items-center gap-1 transition-colors"

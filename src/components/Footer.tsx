@@ -5,6 +5,8 @@ import { useLanguage } from "@/context/LanguageContext";
 import { SITE_CONFIG } from "@/data/siteData";
 import { MapPin, Phone, MessageCircle, Clock } from "lucide-react";
 
+import { asset } from "@/utils/paths";
+
 export default function Footer() {
   const { locale } = useLanguage();
 
@@ -52,7 +54,7 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="p-2 rounded-xl bg-white inline-block max-w-[210px] shadow-sm">
               <img
-                src="/workshop/official-logo-transparent.png"
+                src={asset("/workshop/official-logo-transparent.png")}
                 alt="الماهر العالمي"
                 className="h-10 w-auto object-contain"
               />

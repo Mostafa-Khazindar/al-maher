@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { SITE_CONFIG } from "@/data/siteData";
 import { Phone, MessageCircle, Menu, X, Globe, Calendar } from "lucide-react";
+import { asset } from "@/utils/paths";
 
 export default function Navbar() {
   const { locale, toggleLocale } = useLanguage();
@@ -20,7 +21,7 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all">
+    <header className="sticky top-0 z-50 bg-[#fbfaf6]/90 backdrop-blur-md border-b border-[#e8e4d8] shadow-sm transition-all">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Official Clean Logo */}
@@ -28,7 +29,7 @@ export default function Navbar() {
             <a href="#" className="flex items-center gap-3 group">
               <div className="h-12 w-auto max-w-[200px] sm:max-w-[240px] flex items-center justify-center">
                 <img
-                  src="/workshop/official-logo-transparent.png"
+                  src={asset("/workshop/official-logo-transparent.png")}
                   alt="الماهر العالمي - الشعار الرسمي"
                   className="h-11 sm:h-12 w-auto object-contain hover:scale-105 transition-transform"
                 />
@@ -42,7 +43,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-semibold text-slate-600 hover:text-blue-600 transition-colors py-1 relative hover:after:w-full after:w-0 after:h-[2px] after:bg-blue-600 after:absolute after:bottom-0 after:left-0 after:transition-all"
+                className="text-sm font-semibold text-slate-700 hover:text-blue-600 transition-colors py-1 relative hover:after:w-full after:w-0 after:h-[2px] after:bg-blue-600 after:absolute after:bottom-0 after:left-0 after:transition-all"
               >
                 {locale === "ar" ? link.labelAr : link.labelEn}
               </a>
@@ -54,7 +55,7 @@ export default function Navbar() {
             {/* Lang Switch */}
             <button
               onClick={toggleLocale}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-slate-100 border border-slate-200 hover:border-blue-400 text-slate-700 hover:text-blue-600 transition-all cursor-pointer"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-white border border-[#e8e4d8] hover:border-blue-400 text-slate-700 hover:text-blue-600 transition-all cursor-pointer shadow-2xs"
               title="Change Language"
             >
               <Globe className="w-3.5 h-3.5 text-blue-600" />
@@ -70,7 +71,7 @@ export default function Navbar() {
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-300 hover:bg-emerald-100 transition-all"
+              className="flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-300/80 hover:bg-emerald-100 transition-all shadow-2xs"
             >
               <MessageCircle className="w-4 h-4 text-emerald-600" />
               <span>{locale === "ar" ? "واتساب" : "WhatsApp"}</span>
@@ -79,7 +80,7 @@ export default function Navbar() {
             {/* Book Appointment CTA */}
             <a
               href="#appointment"
-              className="flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-bold bg-blue-600 hover:bg-blue-700 text-white shadow-md shadow-blue-500/20 transition-all cursor-pointer active:scale-95"
+              className="flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold bg-blue-600 hover:bg-blue-700 text-white shadow-md shadow-blue-500/20 transition-all cursor-pointer active:scale-95"
             >
               <Calendar className="w-4 h-4 text-white" />
               <span>{locale === "ar" ? "طلب حجز موعد" : "Book Request"}</span>
@@ -90,13 +91,13 @@ export default function Navbar() {
           <div className="flex items-center gap-2 lg:hidden">
             <button
               onClick={toggleLocale}
-              className="px-2.5 py-1 rounded text-xs font-bold bg-slate-100 text-blue-600 border border-slate-200"
+              className="px-2.5 py-1 rounded-lg text-xs font-bold bg-white text-blue-600 border border-[#e8e4d8]"
             >
               {locale === "ar" ? "EN" : "عربي"}
             </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg bg-slate-100 border border-slate-200 text-slate-700 hover:text-blue-600"
+              className="p-2 rounded-xl bg-white border border-[#e8e4d8] text-slate-700 hover:text-blue-600"
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -107,13 +108,13 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white border-b border-slate-200 px-4 pt-3 pb-6 space-y-3">
+        <div className="lg:hidden bg-[#fbfaf6] border-b border-[#e8e4d8] px-4 pt-3 pb-6 space-y-3">
           <div className="grid grid-cols-2 gap-2 pb-2">
             <a
               href={`https://wa.me/966544792646`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 py-2.5 rounded-lg text-xs font-bold bg-emerald-50 border border-emerald-300 text-emerald-700"
+              className="flex items-center justify-center gap-2 py-2.5 rounded-xl text-xs font-bold bg-emerald-50 border border-emerald-300 text-emerald-800"
             >
               <MessageCircle className="w-4 h-4" />
               WhatsApp
@@ -121,19 +122,19 @@ export default function Navbar() {
             <a
               href="#appointment"
               onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center justify-center gap-2 py-2.5 rounded-lg text-xs font-bold bg-blue-600 text-white shadow"
+              className="flex items-center justify-center gap-2 py-2.5 rounded-xl text-xs font-bold bg-blue-600 text-white shadow"
             >
               <Calendar className="w-4 h-4" />
               {locale === "ar" ? "طلب موعد" : "Book Request"}
             </a>
           </div>
-          <div className="border-t border-slate-100 pt-2 flex flex-col space-y-1">
+          <div className="border-t border-[#e8e4d8] pt-2 flex flex-col space-y-1">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="px-3 py-2.5 rounded-md text-sm font-semibold text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                className="px-3 py-2.5 rounded-lg text-sm font-semibold text-slate-700 hover:bg-white hover:text-blue-600 transition-colors"
               >
                 {locale === "ar" ? link.labelAr : link.labelEn}
               </a>
