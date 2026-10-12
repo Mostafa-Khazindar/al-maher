@@ -7,7 +7,6 @@ import Hero from "@/components/Hero";
 import AboutUs from "@/components/AboutUs";
 import Services from "@/components/Services";
 import Materials from "@/components/Materials";
-import PaintShowroomViewer from "@/components/PaintShowroomViewer";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import WorkshopGallery from "@/components/WorkshopGallery";
 import RepairProcess from "@/components/RepairProcess";
@@ -29,7 +28,6 @@ export default function Home() {
           <AboutUs />
           <Services />
           <Materials />
-          <PaintShowroomViewer />
           <BeforeAfterSlider />
           <WorkshopGallery />
           <RepairProcess />

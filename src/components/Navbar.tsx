@@ -13,11 +13,10 @@ export default function Navbar() {
   const navLinks = [
     { href: "#about", labelAr: "من نحن", labelEn: "About Us" },
     { href: "#services", labelAr: "خدماتنا", labelEn: "Services" },
-    { href: "#materials", labelAr: "المواد والدهان", labelEn: "Materials" },
-    { href: "#paint-studio", labelAr: "استوديو الطلاء", labelEn: "Paint Studio" },
+    { href: "#materials", labelAr: "المواد والدهانات", labelEn: "Materials" },
     { href: "#portfolio", labelAr: "قبل وبعد", labelEn: "Before & After" },
     { href: "#gallery", labelAr: "معرض الورشة", labelEn: "Gallery" },
-    { href: "#location", labelAr: "الفروع والموقع", labelEn: "Branches" },
+    { href: "#location", labelAr: "الفروع والمواقع", labelEn: "Locations" },
     { href: "#appointment", labelAr: "احجز موعد", labelEn: "Book" },
   ];
 
