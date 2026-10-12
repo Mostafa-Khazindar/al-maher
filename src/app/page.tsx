@@ -7,6 +7,7 @@ import Hero from "@/components/Hero";
 import AboutUs from "@/components/AboutUs";
 import Services from "@/components/Services";
 import Materials from "@/components/Materials";
+import PaintShowroomViewer from "@/components/PaintShowroomViewer";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import WorkshopGallery from "@/components/WorkshopGallery";
 import RepairProcess from "@/components/RepairProcess";
@@ -18,7 +19,7 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <LanguageProvider>
-      <div className="flex flex-col min-h-screen bg-[#07090e] text-[#e2e8f0] relative">
+      <div className="flex flex-col min-h-screen bg-[#fbfaf6] text-slate-800 relative">
         {/* Navigation */}
         <Navbar />
 
@@ -28,6 +29,7 @@ export default function Home() {
           <AboutUs />
           <Services />
           <Materials />
+          <PaintShowroomViewer />
           <BeforeAfterSlider />
           <WorkshopGallery />
           <RepairProcess />

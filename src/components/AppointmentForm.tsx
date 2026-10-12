@@ -207,6 +207,8 @@ export default function AppointmentForm() {
                   >
                     <option value="collision">{locale === "ar" ? "إصلاح حوادث وسمكرة شاملة" : "Accident / Collision Repair"}</option>
                     <option value="paint">{locale === "ar" ? "دهان ورش فرن حراري (Spies Hecker)" : "Thermal Bake Paint"}</option>
+                    <option value="mechanics">{locale === "ar" ? "ميكانيكا وصيانة المركبات والعضلات" : "Mechanical Repair & Maintenance"}</option>
+                    <option value="electronics">{locale === "ar" ? "كهرباء وفحص كمبيوتر وبرمجة" : "Auto Electrical & Diagnostics"}</option>
                     <option value="dent">{locale === "ar" ? "إصلاح انبعاجات وخدوش" : "Dent & Scratch Repair"}</option>
                     <option value="bumper">{locale === "ar" ? "إصلاح وتعديل صدام" : "Bumper Repair"}</option>
                     <option value="inspect">{locale === "ar" ? "فحص ومعاينة وتقدير ضرر" : "Inspection & Estimate"}</option>

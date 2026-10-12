@@ -13,6 +13,8 @@ import {
   FileCheck2,
   Gem,
   ArrowUpRight,
+  Cog,
+  Cpu,
 } from "lucide-react";
 
 export default function Services() {
@@ -27,6 +29,8 @@ export default function Services() {
     Layers: <Layers className="w-6 h-6 text-blue-600" />,
     FileCheck2: <FileCheck2 className="w-6 h-6 text-blue-600" />,
     Gem: <Gem className="w-6 h-6 text-blue-600" />,
+    Cog: <Cog className="w-6 h-6 text-blue-600" />,
+    Cpu: <Cpu className="w-6 h-6 text-blue-600" />,
   };
 
   return (

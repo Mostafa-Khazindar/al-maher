@@ -11,11 +11,11 @@ export default function Materials() {
   const { locale } = useLanguage();
 
   return (
-    <section id="materials" className="py-24 bg-slate-50 relative overflow-hidden border-t border-slate-200">
+    <section id="materials" className="py-24 bg-[#fbfaf6] relative overflow-hidden border-t border-[#e8e4d8]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 border border-blue-200 text-blue-700 text-xs font-bold tracking-wider uppercase">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold tracking-wider uppercase">
             <FlaskConical className="w-3.5 h-3.5 text-blue-600" />
             <span>{locale === "ar" ? "المواد والتقنية المستخدمة" : "Materials & Technology"}</span>
           </div>
@@ -38,10 +38,10 @@ export default function Materials() {
         </div>
 
         {/* Real Product Showcase Banner */}
-        <div className="mb-12 rounded-3xl bg-white border border-slate-200 p-6 sm:p-10 shadow-lg overflow-hidden">
+        <div className="mb-12 rounded-3xl bg-[#f5f3ec] border border-[#e8e4d8] p-6 sm:p-10 shadow-xl overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* Visual Photo of Spies Hecker Tins */}
-            <div className="lg:col-span-6 rounded-2xl overflow-hidden border border-slate-200 shadow-md">
+            <div className="lg:col-span-6 rounded-2xl overflow-hidden border border-[#e8e4d8] shadow-md bg-white">
               <img
                 src={asset("/materials/spies-hecker-products.jpg")}
                 alt="منتجات وعبوات دهانات Spies Hecker في ورشة الماهر"
@@ -51,7 +51,7 @@ export default function Materials() {
 
             {/* Technical Detail Specs */}
             <div className="lg:col-span-6 space-y-5">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-50 border border-blue-200 text-blue-700 font-mono text-xs font-bold">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-100 border border-blue-200 text-blue-800 font-mono text-xs font-bold">
                 ★ {locale === "ar" ? "منتجات الطلاء المعتمدة في مركز الماهر" : "Certified Workshop Refinish System"}
               </div>
               <h3 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
@@ -90,7 +90,7 @@ export default function Materials() {
           {MATERIALS.map((mat) => (
             <div
               key={mat.id}
-              className="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between hover:border-blue-300 transition-colors"
+              className="p-6 rounded-3xl bg-[#f5f3ec] border border-[#e8e4d8] shadow-2xs flex flex-col justify-between hover:border-blue-400 transition-all hover:shadow-md"
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
@@ -109,7 +109,7 @@ export default function Materials() {
                     </span>
                     {locale === "ar" ? mat.purposeAr : mat.purposeEn}
                   </p>
-                  <p className="pt-2 border-t border-slate-100 text-slate-500">
+                  <p className="pt-2 border-t border-[#e8e4d8] text-slate-500">
                     <span className="font-bold text-slate-700">
                       {locale === "ar" ? "أهميته للسيارة: " : "Why it matters: "}
                     </span>

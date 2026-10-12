@@ -9,11 +9,11 @@ export default function RepairProcess() {
   const { locale, isRTL } = useLanguage();
 
   return (
-    <section id="process" className="py-24 bg-slate-50 relative overflow-hidden border-t border-slate-200">
+    <section id="process" className="py-24 bg-[#fbfaf6] relative overflow-hidden border-t border-[#e8e4d8]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 border border-blue-200 text-blue-700 text-xs font-bold tracking-wider uppercase">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold tracking-wider uppercase">
             <span>{locale === "ar" ? "مسار العمل الهندسي" : "Repair Methodology"}</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900">
@@ -39,14 +39,14 @@ export default function RepairProcess() {
           {PROCESS_STEPS.map((step) => (
             <div
               key={step.step}
-              className="relative p-7 rounded-2xl bg-white border border-slate-200 hover:border-blue-400 transition-all duration-300 group flex flex-col justify-between shadow-sm hover:shadow-md"
+              className="relative p-7 rounded-3xl bg-[#f5f3ec] border border-[#e8e4d8] hover:border-blue-500 transition-all duration-300 group flex flex-col justify-between shadow-2xs hover:shadow-xl hover:-translate-y-1"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <span className="font-mono text-3xl font-black text-blue-600 group-hover:scale-105 transition-transform">
                     {step.step}
                   </span>
-                  <div className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                  <div className="w-8 h-8 rounded-full bg-white border border-[#e8e4d8] flex items-center justify-center text-slate-500 group-hover:bg-blue-600 group-hover:text-white transition-all shadow-2xs">
                     {isRTL ? <ChevronLeft className="w-4 h-4" /> : <ChevronRight className="w-4 h-4" />}
                   </div>
                 </div>
@@ -61,7 +61,7 @@ export default function RepairProcess() {
               </div>
 
               {/* Key Deliverables */}
-              <div className="pt-4 border-t border-slate-100 space-y-2">
+              <div className="pt-4 border-t border-[#e8e4d8] space-y-2">
                 {(locale === "ar" ? step.keyPointsAr : step.keyPointsEn).map((point, idx) => (
                   <div key={idx} className="flex items-center gap-2 text-xs text-slate-700">
                     <Check className="w-3.5 h-3.5 text-blue-600 shrink-0" />

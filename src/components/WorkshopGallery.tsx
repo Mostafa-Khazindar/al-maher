@@ -50,11 +50,11 @@ export default function WorkshopGallery() {
   ];
 
   return (
-    <section id="gallery" className="py-24 bg-slate-50 border-t border-slate-200 relative">
+    <section id="gallery" className="py-24 bg-[#fbfaf6] border-t border-[#e8e4d8] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 border border-blue-200 text-blue-700 text-xs font-bold tracking-wider uppercase">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold tracking-wider uppercase">
             <Sparkles className="w-3.5 h-3.5 text-blue-600" />
             <span>{locale === "ar" ? "معرض الصور الواقعي" : "Authentic Workshop Gallery"}</span>
           </div>
@@ -82,7 +82,7 @@ export default function WorkshopGallery() {
             <div
               key={idx}
               onClick={() => setSelectedImage(item.src)}
-              className="group relative rounded-3xl overflow-hidden bg-white border border-slate-200 hover:border-blue-400 transition-all duration-300 shadow-sm hover:shadow-xl cursor-pointer flex flex-col"
+              className="group relative rounded-3xl overflow-hidden bg-[#f5f3ec] border border-[#e8e4d8] hover:border-blue-400 transition-all duration-300 shadow-2xs hover:shadow-xl cursor-pointer flex flex-col"
             >
               <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-100">
                 <img

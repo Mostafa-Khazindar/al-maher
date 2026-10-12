@@ -19,6 +19,55 @@ export const SITE_CONFIG = {
   experiencePlaceholderEn: "[Workshop Experience]",
 };
 
+export const BRANCHES = [
+  {
+    id: "branch-asfan",
+    nameAr: "الفرع الرئيسي — صناعية عسفان",
+    nameEn: "Main Branch — Asfan Industrial Area",
+    addressAr: "صناعية عسفان، بلوك 1102 / 1103، جدة، المملكة العربية السعودية",
+    addressEn: "Asfan Industrial Area, Block 1102 / 1103, Jeddah, Saudi Arabia",
+    badgeAr: "الفرع النشط حالياً",
+    badgeEn: "Active Facility",
+    isPrimary: true,
+    mapsUrl: "https://maps.google.com/?q=Asfan+Industrial+Area+Jeddah",
+    phone: "0544792646",
+    featuresAr: [
+      "قسم السمكرة وسحب الشاسيه والهياكل",
+      "أفران الرش الحراري وأنظمة Spies Hecker",
+      "قسم صيانة الميكانيكا والعضلات",
+      "فحص كهرباء وبرمجة كمبيوتر السيارات"
+    ],
+    featuresEn: [
+      "Body & chassis alignment workshop",
+      "Thermal spray booths & Spies Hecker coatings",
+      "Mechanical service & suspension department",
+      "Automotive electrical diagnostics & programming"
+    ]
+  },
+  {
+    id: "branch-two",
+    nameAr: "الفرع الثاني لمركز الماهر العالمي",
+    nameEn: "Branch 2 — Al-Maher Al-Alami",
+    addressAr: "[سيتم إضافة موقع الفرع ورابط الخريطة قريباً]",
+    addressEn: "[Location link and details coming soon]",
+    badgeAr: "فرع إضافي — قريباً",
+    badgeEn: "Additional Branch — Coming Soon",
+    isPrimary: false,
+    mapsUrl: "",
+    phone: "0544792646",
+    featuresAr: [
+      "توسعة خدمات صيانة وسمكرة السيارات",
+      "موقع جديد لخدمة العملاء بسهولة",
+      "ربط مباشر مع إدارة الماهر لضمان أعلى جودة"
+    ],
+    featuresEn: [
+      "Expanded body repair & maintenance capacity",
+      "New convenient location for vehicle drop-off",
+      "Unified Al-Maher quality assurance standards"
+    ]
+  }
+];
+
 export const SERVICES: ServiceItem[] = [
   {
     id: "collision-repair",
@@ -59,6 +108,26 @@ export const SERVICES: ServiceItem[] = [
     iconName: "Palette",
     badgeAr: "تطابق بنسبة 100%",
     badgeEn: "100% Blending",
+  },
+  {
+    id: "mechanics-maintenance",
+    titleAr: "ميكانيكا وصيانة المركبات",
+    titleEn: "Mechanical Repair & Maintenance",
+    descAr: "صيانة ميكانيكية شاملة لمنظومة المحرك، القير، نظام التعليق، الفرامل، والعضلات السفلية بأعلى معايير الدقة والاعتمادية.",
+    descEn: "Comprehensive mechanical servicing covering powertrain, transmission, brakes, suspension, and steering components.",
+    iconName: "Cog",
+    badgeAr: "ميكانيكا متقدمة",
+    badgeEn: "Precision Mechanics",
+  },
+  {
+    id: "electrical-diagnostics",
+    titleAr: "كهرباء وإلكترونيات وبرمجة السيارات",
+    titleEn: "Auto Electrical & Diagnostics",
+    descAr: "فحص كمبيوتر بأحدث أجهزة OBD2 وكشف الأعطال الكهربائية المعقدة، فحص الحساسات والضفائر، وإعادة برمجة وحدات التحكم الإلكترونية (ECU).",
+    descEn: "Computerized OBD2 diagnostics, advanced wiring harness repair, sensor calibration, and ECU electronic module programming.",
+    iconName: "Cpu",
+    badgeAr: "فحص كمبيوتر وبرمجة",
+    badgeEn: "Computer Diagnostics",
   },
   {
     id: "dent-repair",

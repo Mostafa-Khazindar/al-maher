@@ -89,11 +89,26 @@ export default function SmartChatbot() {
       let botResponse = "";
       const lower = text.toLowerCase();
 
-      if (lower.includes("خدم") || lower.includes("service") || lower.includes("سمكر") || lower.includes("رش") || lower.includes("body")) {
+      if (lower.includes("ميكانيك") || lower.includes("صيان") || lower.includes("محرك") || lower.includes("عضلات") || lower.includes("mechanic")) {
         botResponse =
           locale === "ar"
-            ? "نحن متخصصون في سمكرة وهياكل ودهان السيارات، إصلاح الحوادث، سحب وتعديل الصاج، مطابقة الألوان الرقمية، الدهان بالفرن الحراري بأنظمة Spies Hecker الألمانية، وإصلاح الصدامات والتشطيب والتلميع."
-            : "We specialize in collision body repair, precision sheet-metal pulling, digital color matching, thermal spray booth refinishing with Spies Hecker systems, bumper restoration, and high-gloss polishing.";
+            ? "نعم، يقدم مركز الماهر العالمي خدمات متكاملة في ميكانيكا وصيانة المركبات، صيانة المحركات وناقل الحركة (القير)، فحص نظام التعليق والعضلات، ونظام الفرامل بأعلى مستويات الدقة والاعتمادية."
+            : "Yes, Al-Maher Al-Alami provides comprehensive mechanical services including engine and transmission repair, suspension and steering maintenance, and brake servicing.";
+      } else if (lower.includes("كهرب") || lower.includes("كمبيوتر") || lower.includes("برمج") || lower.includes("فحص") || lower.includes("electric") || lower.includes("diagnost")) {
+        botResponse =
+          locale === "ar"
+            ? "نعم، يتوفر لدينا قسم متخصص في فحص كمبيوتر السيارات بأحدث أجهزة كشف الأعطال OBD2، تتبع وإصلاح الأعطال الكهربائية والحساسات والضفائر، وبرمجة وحدات التحكم الإلكترونية (ECU)."
+            : "Yes, we feature a specialized auto-electrical department with state-of-the-art OBD2 computer diagnostics, wiring troubleshooting, sensor calibration, and module programming.";
+      } else if (lower.includes("فرع") || lower.includes("فروع") || lower.includes("branch")) {
+        botResponse =
+          locale === "ar"
+            ? "الفرع الرئيسي النشط حالياً يقع في صناعية عسفان — بلوك 1102 / 1103 بجدة. كما يجري العمل على تجهيز وتفعيل الفرع الثاني وسيتم إعلان تفاصيله ورابط الخريطة قريباً. للتواصل الموحد: 0544792646."
+            : "Our primary operational facility is located in Asfan Industrial Area — Block 1102 / 1103, Jeddah. Our secondary branch details and location link are coming soon. Contact: 0544792646.";
+      } else if (lower.includes("خدم") || lower.includes("service") || lower.includes("سمكر") || lower.includes("رش") || lower.includes("body")) {
+        botResponse =
+          locale === "ar"
+            ? "نحن متخصصون في سمكرة وهياكل ودهان السيارات، إصلاح الحوادث، سحب وتعديل الصاج، مطابقة الألوان الرقمية، الدهان بالفرن الحراري بأنظمة Spies Hecker الألمانية، بالإضافة إلى ميكانيكا السيارات وفحص الكهرباء والكمبيوتر."
+            : "We specialize in collision body repair, precision sheet-metal pulling, digital color matching, thermal spray booth refinishing with Spies Hecker systems, as well as vehicle mechanics and computerized electrical diagnostics.";
       } else if (lower.includes("موقع") || lower.includes("وين") || lower.includes("location") || lower.includes("عسفان") || lower.includes("where")) {
         botResponse =
           locale === "ar"
