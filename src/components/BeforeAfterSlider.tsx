@@ -1,34 +1,52 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useCallback } from "react";
 import { useLanguage } from "@/context/LanguageContext";
-import { ArrowLeftRight, CheckCircle2, AlertTriangle, Sparkles, Wrench, ShieldCheck } from "lucide-react";
+import { ArrowLeftRight, CheckCircle2, AlertTriangle } from "lucide-react";
 import { asset } from "@/utils/paths";
 
 export default function BeforeAfterSlider() {
   const { locale, isRTL } = useLanguage();
   const [sliderPos, setSliderPos] = useState(50);
   const containerRef = useRef<HTMLDivElement>(null);
+  const isDraggingRef = useRef(false);
 
-  const updateSlider = (clientX: number) => {
+  const updatePositionFromClientX = useCallback((clientX: number) => {
     if (!containerRef.current) return;
     const rect = containerRef.current.getBoundingClientRect();
-    const x = Math.max(0, Math.min(clientX - rect.left, rect.width));
-    const percentage = (x / rect.width) * 100;
-    setSliderPos(percentage);
-  };
+    if (rect.width === 0) return;
+
+    let percentage: number;
+    if (isRTL) {
+      // In RTL: right is 0%, left is 100%
+      percentage = ((rect.right - clientX) / rect.width) * 100;
+    } else {
+      // In LTR: left is 0%, right is 100%
+      percentage = ((clientX - rect.left) / rect.width) * 100;
+    }
+
+    const clamped = Math.max(0, Math.min(percentage, 100));
+    setSliderPos(clamped);
+  }, [isRTL]);
 
   const handlePointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
-    updateSlider(e.clientX);
-    const onPointerMove = (moveEvent: PointerEvent) => {
-      updateSlider(moveEvent.clientX);
-    };
-    const onPointerUp = () => {
-      window.removeEventListener("pointermove", onPointerMove);
-      window.removeEventListener("pointerup", onPointerUp);
-    };
-    window.addEventListener("pointermove", onPointerMove);
-    window.addEventListener("pointerup", onPointerUp);
+    isDraggingRef.current = true;
+    (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
+    updatePositionFromClientX(e.clientX);
+  };
+
+  const handlePointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
+    if (!isDraggingRef.current) return;
+    updatePositionFromClientX(e.clientX);
+  };
+
+  const handlePointerUp = (e: React.PointerEvent<HTMLDivElement>) => {
+    isDraggingRef.current = false;
+    try {
+      (e.currentTarget as HTMLElement).releasePointerCapture(e.pointerId);
+    } catch {
+      // ignore
+    }
   };
 
   return (
@@ -95,51 +113,60 @@ export default function BeforeAfterSlider() {
             <div
               ref={containerRef}
               onPointerDown={handlePointerDown}
-              className="relative w-full aspect-[4/3] sm:aspect-[16/10] max-h-[580px] rounded-2xl overflow-hidden cursor-ew-resize select-none border border-[#e8e4d8] shadow-lg bg-slate-950 touch-none"
+              onPointerMove={handlePointerMove}
+              onPointerUp={handlePointerUp}
+              onPointerCancel={handlePointerUp}
+              className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden cursor-ew-resize select-none border border-[#e8e4d8] shadow-lg bg-slate-950 touch-none"
             >
               {/* "AFTER" Layer (Full Background - Repaired Cadillac) */}
               <div className="absolute inset-0 w-full h-full bg-slate-900 overflow-hidden">
                 <img
                   src={asset("/portfolio/cadillac-after-matched.jpg")}
                   alt="Cadillac ATS After Repair"
-                  className="w-full h-full object-cover object-center pointer-events-none"
+                  className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none"
                 />
 
                 {/* Badge After */}
-                <div className="absolute top-4 end-4 bg-blue-600 text-white font-black text-xs px-4 py-2 rounded-xl shadow-lg z-10 flex items-center gap-1.5">
+                <div className="absolute top-4 end-4 bg-blue-600/95 backdrop-blur-sm text-white font-black text-xs px-3.5 py-1.5 rounded-xl shadow-lg z-10 flex items-center gap-1.5 border border-white/20 pointer-events-none">
                   <CheckCircle2 className="w-4 h-4 text-emerald-300" />
-                  <span>{locale === "ar" ? "بعد الإصلاح والدهان (AFTER)" : "AFTER REPAIR"}</span>
+                  <span>{locale === "ar" ? "بعد الإصلاح (AFTER)" : "AFTER REPAIR"}</span>
                 </div>
               </div>
 
-              {/* "BEFORE" Layer (Clipped - Collision Damage) */}
+              {/* "BEFORE" Layer (Clipped to sliderPos width from start) */}
               <div
-                className="absolute inset-0 h-full overflow-hidden border-e-4 border-blue-500 z-10"
+                className="absolute inset-y-0 start-0 overflow-hidden z-10 border-e-2 border-blue-500 shadow-[0_0_15px_rgba(37,99,235,0.4)] pointer-events-none"
                 style={{ width: `${sliderPos}%` }}
               >
-                <div className="relative w-full h-full min-w-[320px] bg-slate-900 overflow-hidden">
+                {/* Fixed-size inner wrapper equal to parent container size */}
+                <div
+                  className="absolute inset-y-0 start-0 h-full overflow-hidden"
+                  style={{
+                    width: containerRef.current ? `${containerRef.current.clientWidth}px` : "100%",
+                  }}
+                >
                   <img
                     src={asset("/portfolio/cadillac-before-matched.jpg")}
                     alt="Cadillac ATS Before Repair - Collision Damage"
-                    className="w-full h-full object-cover object-center pointer-events-none"
-                    style={{ width: "100%", height: "100%" }}
+                    className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none"
                   />
 
                   {/* Badge Before */}
-                  <div className="absolute top-4 start-4 bg-rose-600 text-white font-black text-xs px-4 py-2 rounded-xl shadow-lg flex items-center gap-1.5">
+                  <div className="absolute top-4 start-4 bg-rose-600/95 backdrop-blur-sm text-white font-black text-xs px-3.5 py-1.5 rounded-xl shadow-lg flex items-center gap-1.5 border border-white/20 pointer-events-none">
                     <AlertTriangle className="w-4 h-4 text-yellow-300" />
-                    <span>{locale === "ar" ? "قبل الإصلاح - حالة الصدمة (BEFORE)" : "BEFORE (COLLISION)"}</span>
+                    <span>{locale === "ar" ? "قبل الإصلاح (BEFORE)" : "BEFORE (COLLISION)"}</span>
                   </div>
                 </div>
               </div>
 
-              {/* Vertical Slider Handle */}
+              {/* Vertical Slider Handle / Divider line */}
               <div
-                className="absolute top-0 bottom-0 w-1 bg-blue-500 shadow-[0_0_15px_#2563eb] pointer-events-none"
-                style={{ left: `${sliderPos}%` }}
+                className="absolute inset-y-0 z-20 pointer-events-none"
+                style={{ [isRTL ? "right" : "left"]: `${sliderPos}%` }}
               >
-                <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center shadow-2xl border-2 border-white text-xs">
-                  <ArrowLeftRight className="w-5 h-5" />
+                <div className="absolute top-0 bottom-0 w-0.5 -translate-x-1/2 bg-white shadow-[0_0_10px_rgba(0,0,0,0.5)]" />
+                <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-11 h-11 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center shadow-2xl border-2 border-white">
+                  <ArrowLeftRight className="w-4 h-4" />
                 </div>
               </div>
             </div>
